@@ -86,6 +86,23 @@ export default function RegisterModal() {
         icon={FcGoogle}
         onClick={() => {}}
       />
+      <Button
+        outline
+        label="Continue with Github"
+        icon={AiFillGithub}
+        onClick={() => {}}
+      />
+      <div className="mt-4 text-center font-light text-neutral-500">
+        <div className="flex flex-row items-center justify-center gap-2">
+          <div>Already have an account?</div>
+          <div
+            onClick={registerModal.onClose}
+            className="cursor-pointer text-neutral-800 hover:underline"
+          >
+            Log in
+          </div>
+        </div>
+      </div>
     </div>
   );
 
