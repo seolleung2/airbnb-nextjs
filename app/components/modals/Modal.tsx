@@ -3,13 +3,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { IoMdClose } from 'react-icons/io';
-import { GrGooglePlus } from 'react-icons/gr';
 import Button from '@components/Button';
 
 interface ModalProps {
   isOpen?: boolean;
-  //   onClose: () => void;
-  //   onSubmit: () => void;
   onClose?: () => void;
   onSubmit?: () => void;
   title?: string;
@@ -102,7 +99,6 @@ export default function Modal({
                   <Button
                     disabled={disabled}
                     label={actionLabel}
-                    // icon={GrGooglePlus}
                     onClick={handleSubmit}
                   />
                 </div>
