@@ -28,7 +28,9 @@
       "@providers/*": ["providers/*"],
       "@providers": ["providers"],
       "@libs/*": ["libs/*"],
-      "@libs": ["libs"]
+      "@libs": ["libs"],
+      "@actions/*": ["actions/*"],
+      "@actions": ["actions"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
