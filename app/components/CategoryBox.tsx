@@ -7,14 +7,12 @@ import qs from 'query-string';
 interface CategoryBoxProps {
   icon: IconType;
   label: string;
-  description: string;
   selected?: boolean;
 }
 
 export default function CategoryBox({
   icon: Icon,
   label,
-  description,
   selected,
 }: CategoryBoxProps) {
   const router = useRouter();
@@ -33,10 +31,10 @@ export default function CategoryBox({
     };
 
     if (params?.get('category') === label) {
-      delete updatedQuery.cateogry;
+      delete updatedQuery.category;
     }
 
-    const url = qs.stringify(
+    const url = qs.stringifyUrl(
       {
         url: '/',
         query: updatedQuery,
@@ -58,7 +56,7 @@ export default function CategoryBox({
       )}
     >
       <Icon size={26} />
-      <div className="textt-sm font-medium">{label}</div>
+      <div className="text-sm font-medium">{label}</div>
     </div>
   );
 }
